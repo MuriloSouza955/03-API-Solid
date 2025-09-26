@@ -1,0 +1,5 @@
+Prisma schema loaded from prisma/schema.prisma
+Datasource "db": PostgreSQL database "apisolid", schema "public" at "localhost:5432"
+
+[2K[1G[36m?[39m [1mEnter a name for the new migration:[22m [90m›[39m 78[2K[1G[2K[1G[31m✖[39m [1mEnter a name for the new migration:[22m [90m…[39m 78
+[?25hCanceled by user.
