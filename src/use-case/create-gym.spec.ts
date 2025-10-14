@@ -1,14 +1,14 @@
-import { InMemoryGymsRepository } from "@/repositories/in-memory/in-memory-gyns-repository.js";
-import { CreateGynUseCase } from "./create-gyn.js";
+import { InMemoryGymsRepository } from "@/repositories/in-memory/in-memory-gyms-repository.js";
+import { CreateGymUseCase } from "./create-gym.js";
 import { beforeEach, describe, expect, it } from "vitest";
 
 let gymsRepository: InMemoryGymsRepository;
-let sut: CreateGynUseCase;
+let sut: CreateGymUseCase;
 
 describe("Create Gym Use Case", () => {
   beforeEach(() => {
     gymsRepository = new InMemoryGymsRepository();
-    sut = new CreateGynUseCase(gymsRepository);
+    sut = new CreateGymUseCase(gymsRepository);
   });
   
   it("should be able to create a gym", async () => {
