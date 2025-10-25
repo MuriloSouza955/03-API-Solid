@@ -1,4 +1,4 @@
-import { InMemoryGymsRepository } from "@/repositories/in-memory/in-memory-gyns-repository.js";
+import { InMemoryGymsRepository } from "@/repositories/in-memory/in-memory-gyms-repository.js";
 import { describe, beforeEach, it, expect, vi } from "vitest";
 import { FetchNearbyGymsUseCase } from "./fetch-nearby-gyms.js";
 

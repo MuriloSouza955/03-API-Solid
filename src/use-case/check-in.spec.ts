@@ -1,7 +1,7 @@
 import { InMemoryCheckInsRepository } from "@/repositories/in-memory/in-memory-check-ins-repository.js";
 import { CheckInUseCase } from "./check-in.js";
 import { describe, beforeEach, afterEach, it, expect, vi } from "vitest";
-import { InMemoryGymsRepository } from "@/repositories/in-memory/in-memory-gyns-repository.js";
+import { InMemoryGymsRepository } from "@/repositories/in-memory/in-memory-gyms-repository.js";
 import { Decimal } from "@prisma/client/runtime/library";
 import { MaxDistanceError } from "./errors/max-distance-error.js";
 import { MaxNumberCheckInsError } from "./errors/max-number-check-in-error.js";
