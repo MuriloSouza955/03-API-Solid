@@ -14,7 +14,7 @@ describe("Profile Controller (E2E)", () => {
 
   it("should be able to get user profile", async () => {
 
-    const { token } = await createAndAuthenticateUser(app);
+    const { token } = await createAndAuthenticateUser(app, true);
     
 
     const profileResponse = await request(app.server)
@@ -28,7 +28,8 @@ describe("Profile Controller (E2E)", () => {
         created_at: expect.any(String),
         email: "johndoe@example.com",
         id: expect.any(String),
-        name: "Jane Doe",
+        name: "John Doe",
+        role: "ADMIN",
       },
     });
   });
