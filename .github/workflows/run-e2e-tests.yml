@@ -29,7 +29,20 @@ jobs:
 
       - run: npm ci
       - run: npx prisma generate
+      - name: Wait for PostgreSQL to be ready
+        run: |
+          for i in {1..30}; do
+            if (echo > /dev/tcp/localhost/5432) 2>/dev/null; then
+              echo "PostgreSQL is ready!"
+              exit 0
+            fi
+            echo "Waiting for PostgreSQL... ($i/30)"
+            sleep 2
+          done
+          echo "PostgreSQL did not become ready in time"
+          exit 1
       - run: npm run test:e2e
         env:
+          NODE_ENV: test
           JWT_SECRET: testing_secret
           DATABASE_URL: "postgresql://docker:docker@localhost:5432/apisolid?schema=public"
